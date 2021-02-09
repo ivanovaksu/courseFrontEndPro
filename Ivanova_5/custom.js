@@ -1,16 +1,19 @@
 // 1 Дан массив ['a', 'b', 'c']. Добавьте ему в конец элементы 1, 2, 3.
-var someArray = ['a', 'b', 'c'],
-    addSomeArray = someArray.push(1, 2, 3);
+var someArray = ['a', 'b', 'c'];
+someArray.push(1, 2, 3);
+
 console.log(someArray);
 
 // 2 Дан массив [1, 2, 3]. Добавьте ему в начало элементы 4, 5, 6.
-var numArray = [1, 2, 3],
-    addNumArray = numArray.unshift(4, 5, 6);
+var numArray = [1, 2, 3];
+numArray.unshift(4, 5, 6);
+
 console.log(numArray);
 
 // 3 Дан массив ['js', 'css', 'jq']. Выведите на экран первый элемент.
 var myArray = ['js', 'css', 'jq'];
 console.log(myArray[0]);
+console.log(myArray.slice(0, 1)[0]);
 
 // 4 Дан массив ['js', 'css', 'jq']. Выведите на экран последний элемент.
 console.log(myArray[2]);
