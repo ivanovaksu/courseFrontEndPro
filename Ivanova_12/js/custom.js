@@ -1,6 +1,10 @@
 let reviewDiv = document.querySelector('div#review');
 reviewDiv.setAttribute('class', 'review');
 
+let img = document.createElement('img');
+img.setAttribute('src', './images/stickerwall.png');
+reviewDiv.appendChild(img);
+
 let h1 = document.createElement('h1');
 h1.textContent = 'Создание сайта';
 reviewDiv.appendChild(h1);
