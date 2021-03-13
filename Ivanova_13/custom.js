@@ -231,12 +231,13 @@ let data = [
     }
 ]
 
+data.sort(function(a,b){
+    return a.email.localeCompare(b.email);
+})
+
 let userPage = document.querySelector('.user-page');
 
 for(let i = 0; i < data.length; i++) {
-    data.sort(function(a,b){
-        return a.email.localeCompare(b.email);
-    })
     createUserPage(data[i], userPage);
 }
 
