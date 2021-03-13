@@ -241,8 +241,12 @@ for(let i = 0; i < data.length; i++) {
 }
 
 function createUserPage (item, impotTo) {
-    let newPage = `<div id="post-${item.id} class="post-item">
-    <h2>New User:</h2>
+    let userInfo = document.createElement('div');
+    userInfo.setAttribute('id', 'post-' + item.id);
+    userInfo.setAttribute('class', 'post-item');
+    impotTo.appendChild(userInfo);
+
+    let newPage = `<h2>New User:</h2>
     <ul>
         <li>Name: ${item.name}</li>
         <li>Nickname: ${item.username}</li>
@@ -260,5 +264,5 @@ function createUserPage (item, impotTo) {
     <hr>
 </div>`;
 
-    impotTo.innerHTML = newPage;
+    userInfo.innerHTML = newPage;
 }
