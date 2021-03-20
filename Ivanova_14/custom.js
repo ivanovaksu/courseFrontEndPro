@@ -1,14 +1,14 @@
-let blockPane = document.querySelectorAll('.pane');
 let btn = document.querySelectorAll('.hideMsg');
 
-for(let i = 0; i < blockPane.length; i++) {
+for(let i = 0; i < btn.length; i++) {
     btn[i].addEventListener('click', hideBlock);
-    function hideBlock (e) {
-        if(blockPane[i].style.display = 'block') {
-            blockPane[i].style.display = 'none'
-        } else {
-            blockPane[i].style.display = 'block'
-        }
-    };
 }
+
+function hideBlock (e) {
+    if(e.path[2].style.display = 'block') {
+        e.path[2].style.display = 'none'
+    } else {
+        e.path[2].style.display = 'block'
+    }
+};
 
