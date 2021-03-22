@@ -1,7 +1,7 @@
-let btn = document.querySelectorAll('.hideMsg');
+let buttons = document.querySelectorAll('.hideMsg');
 
-for(let i = 0; i < btn.length; i++) {
-    btn[i].addEventListener('click', hideBlock);
+for(button of buttons) {
+    button.addEventListener('click', hideBlock);
 }
 
 function hideBlock (e) {
