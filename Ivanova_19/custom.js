@@ -10,8 +10,8 @@ function openWindow() {
     let timerId = setInterval(randomStep, 1000);
 
     function randomStep() {
-        let xPosition = Math.random() * window.innerWidth;
-        let yPosition = Math.random() * window.innerHeight;
+        let xPosition = Math.floor(Math.random() * window.innerWidth);
+        let yPosition = Math.floor(Math.random() * window.innerHeight);
         newWin.moveTo(xPosition, yPosition);
     }
 
