@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аренда авто</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="form-rent-car">
+        <h1 class="title">Аренда авто</h1>
+        <form action="#">
+            <fieldset class="type-car">
+                <legend>Тип транспорта</legend>
+                <span>
+                    <input type="radio" name="type" id="passenger">
+                    <label for="passenger">Легковой автомобиль</label></span>
+                <span>
+                    <input type="radio" name="type" id="minivan"> 
+                    <label for="minivan">Минивэн</label> 
+                </span>
+                <span>
+                    <input type="radio" name="type" id="motorcycle">
+                    <label for="motorcycle">Скутер</label>
+                </span>
+            </fieldset><hr>
+            <fieldset>
+                <legend>Сколько километров планируете проехать?</legend>
+                    <input type="range" name="distance" id="distance" min="10" max="1000" step="10" value="10">
+                    <label for="distance"><span class="distance-value">10</span> км</label>
+                    <p>Первые 150 км. входят в стоимость аренды. Если вы превысите запланированную дистанцию, каждые дополнительные 10 км. будут стоить вам 20 гривен.</p>
+            </fieldset><hr>
+            <fieldset>
+                <legend>В каком городе вы хотели бы получить транспортное средство в аренду?</legend>
+                <select name="town-rent" id="town-rent">
+                    <option value="dp" selected>Днепр</option>
+                    <option value="kh">Харьков</option>
+                    <option value="kyiv">Киев</option>
+                </select>
+            </fieldset><hr>
+            <p class="result">Итого: <span class="rent-sum">0</span>грн</p>
+            <input class="agreement" type="checkbox" name="agreement" id="agreement" checked>
+            <label for="agreement">Я согласен с условиями аренды</label>
+            <input class="submit" type="submit" value="Оплатить">
+        </form>
+    </div>
+
+    <script src="./custom.js"></script>
+</body>
+</html>
