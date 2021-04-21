@@ -22,14 +22,14 @@ for (let type of typeCar) {
 let priceTypeCar = 0;
 function getPriceOfType() {
     switch (true) {
-        case passenger.checked :
-            priceTypeCar = 1400;
+        case sedan.checked :
+            priceTypeCar = 900;
             break;
         case minivan.checked :
-            priceTypeCar = 4700;
+            priceTypeCar = 1500;
             break;
-        case motorcycle.checked :
-            priceTypeCar = 1000;
+        case jeep.checked :
+            priceTypeCar = 2200;
             break;
         default :
         priceTypeCar = 0;
@@ -65,3 +65,12 @@ function getResult() {
         rentSum.textContent = priceTypeCar + priceDistance;
     }
 }
+
+let btnSubmit = document.querySelector('.submit');
+agreement.addEventListener('input', () => {
+    if (agreement.checked === false) {
+        btnSubmit.disabled = true;
+    } else {
+        btnSubmit.disabled = false;
+    }
+});
