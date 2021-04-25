@@ -32,10 +32,9 @@ function checkInput() {
 
 enterNumber.addEventListener('blur', getSumNumber);
 function getSumNumber(e) {
-    let sum = 0;
     let arrNum = enterNumber.value.split('');
-    for (let num of arrNum) {
-        sum += +num;
-    }
-    getResult.textContent = sum;
+    let total = arrNum.reduce(function (sum, current) {
+        return sum + +current;
+      }, 0);
+    getResult.textContent = total;
 }
