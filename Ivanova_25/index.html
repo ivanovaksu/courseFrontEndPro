@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie calculator</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Калькулятор нормы калорий</h1>
+    <section class="active">
+        <h2>Выберите ваш пол:</h2>
+        <div class="gender-wraper">
+            <label>
+                <input type="radio" name="gender" id="male" checked>
+                <img src="./image/male.png" alt="">
+                <span>Мужской</span>
+            </label>
+            <label>
+                <input type="radio" name="gender" id="female">
+                <img src="./image/female.png" alt="">
+                <span>Женский</span>
+            </label>
+        </div>
+        <button data-step="next">Далее</button>
+    </section>
+    <section>
+        <h2>Выберите уровень ежедневной активности</h2>
+        <input type="range" name="activity" id="activity" min="0" max="5" step="1" value="0">
+        <img class="image-activity" src="./image/manThinks.svg" alt="">
+        <span class="activity-desc"></span>
+        <button data-step="prev">Назад</button>
+        <button data-step="next" disabled>Далее</button>
+    </section>
+    <section>
+        <h2>Внесите ваши данные:</h2>
+        <div class="block-data-item" data-title="Возраст не должен превышать 80 лет">
+            <label for="age">Ваш возраст (лет)</label>
+            <input type="text" name="age" id="age" maxlength="3">
+        </div>
+        <div class="block-data-item">
+            <label for="growth">Ваш рост <span class="growth-value">150</span> см</label>
+            <input type="range" name="growth" id="growth" min="100" max="200" value="150">
+        </div>
+        <div class="block-data-item">
+            <label for="weight">Ваш вес (кг)</label>
+            <input type="text" name="weight" id="weight" maxlength="3">
+        </div>
+        <button data-step="prev">Назад</button>
+        <button data-step="next" disabled>Далее</button>
+    </section>
+    <section>
+        <h2>Выберите желаемый результат</h2>
+        <input type="range" name="desired-result" id="desired-result" min="0" max="3" step="1" value="0">
+        <img class="image-desired-result" src="./image/manThinks.svg" alt="">
+        <span class="desired-result-desc"></span>
+        <button data-step="prev">Назад</button>
+        <button class="show-result" disabled>Рассчитать норму калорий</button>
+    </section>
+    <div class="desc-result"></div>
+
+    </div>
+    <script src="./js/custom.js"></script>
+</body>
+</html>
