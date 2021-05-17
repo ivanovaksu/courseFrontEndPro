@@ -25,7 +25,7 @@ function previousItem(e) {
     }
 }
 
-// alert('Вы даёте согласие на использование cookie-файлов, нажимая "ОК"');
+alert('Вы даёте согласие на использование cookie-файлов, нажимая "ОК"');
 
 function getCookie(name) {
     let matches = document.cookie.match(new RegExp("(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"));
