@@ -1,0 +1,7 @@
+.message-block {
+    display: none;
+}
+
+.active {
+    display: block;
+}
